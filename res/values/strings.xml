@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Survlog</string>
+    <string name="home_new_host_desc">Create a new host for your log files</string>
+    <string name="home_new_host_title">Add Host</string>
+</resources>

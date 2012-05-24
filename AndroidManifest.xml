@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="1" android:versionName="1.0"
+    package="com.grasscove.survlog" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <supports-screens
+        android:smallScreens="false"
+        android:normalScreens="true" 
+        android:largeScreens="true" 
+    	android:xlargeScreens="false"
+	/>
+
+	<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="11"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application android:debuggable="true" android:icon="@drawable/icon" android:label="@string/app_name"
+    	android:name=".SurvlogApp" android:theme="@android:style/Theme.NoTitleBar">
+        <activity android:label="@string/app_name" android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name=".SurvlogService"/>
+        <provider android:authorities="com.grasscove.survlog.provider" android:name="com.grasscove.survlog.provider.SurvlogProvider"/>
+        <activity android:name=".ui.phone.HostActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ui.phone.LogActivity" android:windowSoftInputMode="stateHidden"/>
+    </application>
+</manifest>

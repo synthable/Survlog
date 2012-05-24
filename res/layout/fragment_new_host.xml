@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView style="@style/TitleBarLogo" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="Add New Host" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_bar_ref"
+        android:layout_below="@+id/title_container"
+        android:background="@android:color/transparent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/new_host_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+            <EditText
+                android:id="@+id/new_host_title_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:hint="Title" >
+
+                <requestFocus >
+                </requestFocus>
+            </EditText>
+
+            <TextView
+                android:id="@+id/new_host_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Host"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+            <EditText
+                android:id="@+id/new_host_host_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:hint="Host" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/new_host_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Username"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+            <EditText
+                android:id="@+id/new_host_username_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:hint="Username" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/new_host_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Password"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+            <EditText
+                android:id="@+id/new_host_password_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:hint="(optional)"
+                android:inputType="textPassword" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/new_host_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Port"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+            <EditText
+                android:id="@+id/new_host_port_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:hint="22"
+                android:inputType="number" >
+            </EditText>
+            <!--
+            <TextView
+                android:id="@+id/new_host_password_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/new_host_password"
+                android:text="(Passwords are not stored encrypted)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14sp" >
+            </TextView>
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/button_bar_ref"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/button_bar" />
+
+</RelativeLayout>

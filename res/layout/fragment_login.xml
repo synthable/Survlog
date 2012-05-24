@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:padding="10dp">
+		<EditText android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true" android:layout_width="fill_parent"
+			android:id="@+id/host_login_username_input"
+			android:hint="Username"></EditText>
+		<EditText android:layout_height="wrap_content"
+			android:inputType="textPassword" android:layout_alignParentLeft="true"
+			android:layout_width="fill_parent" android:id="@+id/host_login_password_input" android:layout_below="@+id/host_login_username_input"
+			android:hint="Password"></EditText>
+		<CheckBox android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/host_login_password_input" android:layout_alignLeft="@+id/host_login_password_input" android:id="@+id/host_login_save_password_input" android:text=" Save password"></CheckBox>
+		<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="14sp" android:id="@+id/host_login_password_warning" android:text="(Passwords are not stored encrypted)" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/host_login_save_password_input" android:layout_alignLeft="@+id/host_login_save_password_input"></TextView>
+	</RelativeLayout>
+
+	<include layout="@layout/button_bar" android:id="@+id/button_bar_ref"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		/>
+
+</LinearLayout>

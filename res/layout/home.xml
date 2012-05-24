@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:padding="5dp" android:gravity="center"
+	android:orientation="vertical">
+
+	<LinearLayout style="@style/TitleBar">
+		<ImageView style="@style/TitleBarLogo" />
+
+		<TextView style="@style/TitleBarText" />
+
+		<View style="@style/TitleBarSpring" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<ImageButton style="@style/TitleBarAction" android:src="@drawable/ic_title_add_host"
+			android:id="@+id/title_add_host_button" android:onClick="onClick" />
+
+		<!-- <ImageView style="@style/TitleBarSeparator" />
+		<ImageButton style="@style/TitleBarAction" android:src="@drawable/ic_title_refresh"
+			android:id="@+id/title_refresh_button" android:onClick="onClick" />
+		<ProgressBar style="@style/TitleBarProgressIndicator"
+			android:id="@+id/title_refresh_progress" /> -->
+	</LinearLayout>
+
+	<!-- <ImageView android:id="@+id/add_new_host_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/add_host"
+		android:background="@android:color/transparent" android:onClick="onClick"
+		android:visibility="gone"/> -->
+
+	<FrameLayout android:id="@+id/hosts_fragment"
+		android:layout_weight="1" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:background="@drawable/background_tile"/>
+
+	<!-- <fragment android:id="@+id/hosts_fragment"
+		android:layout_height="match_parent" android:name="com.grasscove.survlog.ui.HostsFragment"
+		android:layout_width="fill_parent" /> -->
+
+</LinearLayout>

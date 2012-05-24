@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout style="@style/TitleBar">
+		<ImageView style="@style/TitleBarLogo" />
+	
+		<TextView style="@style/TitleBarText" android:text="New Log File"/>
+	
+		<View style="@style/TitleBarSpring" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+	</LinearLayout>
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@+id/button_bar"
+		android:layout_below="@+id/title_container">
+			<RelativeLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:padding="10dp">
+			
+				<TextView android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+					android:id="@+id/new_log_title" android:text="Title"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:layout_below="@+id/new_log_title"
+					android:layout_alignParentLeft="true" android:layout_width="fill_parent"
+					android:id="@+id/new_log_title_input">
+					<requestFocus></requestFocus>
+				</EditText>
+				<TextView android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_alignParentLeft="true" android:layout_marginTop="15dp"
+					android:id="@+id/new_log_path" android:layout_below="@+id/new_log_title_input" android:text="File Path"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:layout_below="@+id/new_log_path"
+					android:layout_alignParentLeft="true" android:layout_width="fill_parent"
+					android:id="@+id/new_log_path_input">
+				</EditText>
+				<TextView android:layout_height="wrap_content" android:id="@+id/textView1"
+					android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_alignParentLeft="true" android:layout_marginTop="15dp"
+					android:layout_below="@+id/new_log_path_input" android:text="Start Line"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:inputType="number" android:layout_below="@+id/textView1"
+					android:layout_alignParentLeft="true" android:id="@+id/new_log_start_input"
+					android:layout_width="fill_parent" android:text="50"></EditText>
+			</RelativeLayout>
+	</ScrollView>
+
+	<LinearLayout android:id="@+id/button_bar"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" style="@android:style/ButtonBar"
+		android:layout_alignParentBottom="true">
+		<Button android:id="@+id/save_button"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="1" android:onClick="onClick" android:text="Save" />
+		<Button android:id="@+id/cancel_button"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="1" android:onClick="onClick" android:text="Cancel" />
+	</LinearLayout>
+</RelativeLayout>
